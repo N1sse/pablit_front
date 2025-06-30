@@ -11,5 +11,7 @@
 | 2025-06-29 | `27e8d34` | first commit | N1sse |
 
 #Se uso open.ia para realizar los java script
+
 #Se uso los iconos de bootstrap y de frrepik
+
 #Se uso la ia de frreoki para generar imagenes y videos(apartir de material grafico que habíamos hecho)
