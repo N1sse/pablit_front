@@ -1,0 +1,281 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main-workout-container {
+    background: #2b3042;
+    border-radius: 15px;
+    width: 90%;
+    max-width: 900px;
+    overflow: hidden;
+
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    position: relative;
+}
+
+main {
+
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    background: #232736;
+}
+
+.timer-controls {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.timer-controls button {
+    padding: 8px 18px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    flex: none;
+    min-width: 100px;
+    max-width: 140px;
+    transition: all 0.2s ease-in-out;
+}
+
+
+#startWorkoutBtn {
+    background-color: #dbc17f;
+    color: #051855;
+}
+
+#startWorkoutBtn:hover:not(:disabled) {
+    background-color: #765088;
+    color: #fae09f;
+}
+
+#pauseWorkoutBtn {
+    background-color: #f1ebcd;
+    color: #051855;
+}
+
+#pauseWorkoutBtn:hover:not(:disabled) {
+    background-color: #edcd7f;
+    color: #051855;
+}
+
+#restartWorkoutBtn {
+    background-color: #1e2230;
+    color: #f1ebcd;
+}
+
+#restartWorkoutBtn:hover:not(:disabled) {
+    background-color: #051855;
+    color: #edcd7f;
+}
+
+
+
+#exercise {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background-color: #636363;
+    color: #e0e0e0;
+    font-size: 18px;
+    appearance: none;
+    background-position: right 10px center;
+    background-size: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 1.8em;
+    color: #e0e0e0;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: #e0e0e0;
+    font-size: 1.5em;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+
+.content-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.settings-panel {
+    flex: 1;
+    min-width: 300px;
+    padding: 30px;
+    border-right: 1px solid #3a4055;
+    box-sizing: border-box;
+}
+
+.timer-panel {
+    flex: 1;
+    min-width: 300px;
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+.input-group label {
+    display: block;
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    color: #a0a0a0;
+}
+
+.input-group .sub-label {
+    display: block;
+    font-size: 0.8em;
+    color: #7f859b;
+    margin-top: 5px;
+}
+
+.instructions-box {
+    background: #232736;
+    border-radius: 8px;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+.instructions-box h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+    color: #e0e0e0;
+    border-bottom: 1px solid #3a4055;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.instructions-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.instructions-box ul li {
+    font-size: 0.95em;
+    margin-bottom: 8px;
+    color: #a0a0a0;
+}
+
+.timer-input-section {
+    background: #39636c;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.timer-input-section label {
+    font-size: 1.2em;
+    color: rgb(255, 255, 255);
+    margin-bottom: 10px;
+    display: block;
+}
+
+.timer-input-section input[type="number"] {
+    width: 100px;
+    font-size: 24px;
+    text-align: center;
+    margin-right: 5px;
+    border-radius: 5px;
+}
+
+.timer-input-section span {
+    color: white;
+}
+
+.remaining-time-section {
+    text-align: center;
+}
+
+.remaining-time-section h3 {
+    font-size: 1.5em;
+    color: #e0e0e0;
+    margin-bottom: 15px;
+}
+
+#remainingTimeDisplay {
+    font-size: 3em;
+    font-weight: bold;
+    color: #00aaff;
+    margin-bottom: 25px;
+}
+button{
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#startWorkoutBtn {
+    width: 120px;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 8px;
+    color: #051855;
+    cursor: pointer;
+    background-color: #dbc17f;
+
+}
+
+#startWorkoutBtn:hover {
+    color: #fae09f;
+    background-color: #765088c2;
+}
+
+.cycle-phase-section {
+    background: #232736;
+    padding: 20px 30px;
+    border-top: 1px solid #3a4055;
+    text-align: center;
+}
+
+.cycle-display {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    font-size: 1.1em;
+    color: #a0a0a0;
+}
+
+.cycle-display span {
+    font-weight: bold;
+    color: #e0e0e0;
+}
+
+.back-display
+{
+    font-weight: bold;
+    color: #e0e0e0;
+    font-size: 12px;
+}
+
+.back-display:hover
+{
+    color: #008ecc;
+}

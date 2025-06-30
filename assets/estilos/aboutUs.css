@@ -1,0 +1,149 @@
+
+.about-section{
+    margin-top: 80px;
+}
+.about-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-bottom: 60px;
+}
+
+.about-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.about-row img {
+  width: 90%;
+  max-width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.about-text {
+  max-width: 500px;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  color: #0a153b;
+  margin-bottom: 15px;
+}
+
+.about-text p {
+  font-size: 16px;
+  color: #000000;
+  line-height: 1.6;
+}
+.cards-section {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 70px;
+  flex-wrap: wrap;
+  padding: 50px 20px;
+}
+
+.card {
+  background: #06123de1;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 30px 20px;
+  width: 300px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  font-size: 18px;
+  color: #e7a6d7;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 14px;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+/* Sección de encabezado de ayuda */
+.help-section {
+  color: white;
+  background-color: #0a153b;
+  padding: 60px 20px 40px;
+  text-align: center;
+  border-bottom: 2px solid #cceeff;
+}
+
+.help-header {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.help-text h1 {
+  font-size: 24px;
+  color: #ececec;
+  margin-bottom: 30px;
+}
+
+.help-text p {
+  font-size: 18px;
+  color: #f3f2f2;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* Preguntas frecuentes */
+.faq-section {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 0 20px 60px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.faq-section h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+  color: #0a153b;
+  border-bottom: 2px solid #0a153b;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.faq {
+  margin-bottom: 30px;
+  padding: 25px 30px;
+  background: #c9c8c8;
+  border-left: 6px solid #0a153b;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.faq h3 {
+  margin-top: 0;
+  font-size: 1.4rem;
+  color: #0a153b;
+  margin-bottom: 10px;
+}
+
+.faq p {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #333;
+  line-height: 1.6;
+}
+
+
+
+
+

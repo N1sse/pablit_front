@@ -11,6 +11,8 @@
     <!------ Estilos en css------->
     <!---navbar_footer--->
     <link rel="stylesheet" href="assets/estilos/nav_footer.css">
+    <!----  index css ---->
+    <link rel="stylesheet" href="assets/estilos/index.css">
 
 </head>
 <body>
@@ -29,7 +31,7 @@
                         <a href="paginas/aboutUs.html">Sobre Nosotros</a>
                     </li>
                      <li>
-                        <a href="paginas/login_register.html" class="bLogin">
+                        <a href="paginas/login.html" class="bLogin">
                             <div class="iconLogin">
                               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                    class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
@@ -54,11 +56,47 @@
         </span>
     </a>
 
-    <main>
-        <section>
-            <!-- Aquí va el contenido principal -->
-        </section>
-    </main>
+<main>
+  <!-- Video de fondo -->
+<section class="hero-section">
+  <div class="video-background">
+    <video src="assets/img/bannerVideo.mp4" autoplay loop muted playsinline></video>
+    <div class="overlay"></div>
+  </div>
+  <div class="hero-content right-aligned">
+    <div class="hero-bubble">
+      <h2>Tu aliado en cada paso</h2>
+      <p>Pablit te acomapaña a tu mejor versión</p>
+      <button class="btn-hero"><a href="paginas/login.html">Acceder</a></button>
+    </div>
+  </div>
+</section>
+
+   <!-- Encabezado fuera del banner -->
+  <section class="intro-text">
+    <h1>Transforma tus hábitos con Pablit</h1>
+    <p>Tu compañero virtual que crece contigo</p>
+  </section>
+
+  <!-- Cards -->
+  <section class="cards-section">
+    <div class="card">
+      <h3>Workout</h3>
+      <p>Accede a tu rutina diaria con Pablit y mantente en forma.</p>
+      <a href="paginas/workout.html">Ir a Workout →</a>
+    </div>
+    <div class="card">
+      <h3>Create Account</h3>
+      <p>Regístrate para comenzar a mejorar tus hábitos con Pablit.</p>
+      <a href="paginas/login_register.html">Crear cuenta →</a>
+    </div>
+    <div class="card">
+      <h3>Ayuda</h3>
+      <p>¿Tienes dudas? Encuentra aquí las respuestas.</p>
+      <a href="paginas/help.html">Ayuda →</a>
+    </div>
+  </section>
+</main>
 
     <footer id="contacto">
         <section class="row">
@@ -71,7 +109,7 @@
                     <h4>Links Rápidos</h4>
                     <ul>
                         <li><a href="paginas/help.html">Ayuda</a></li>
-                        <li><a href="paginas/login_register.html">Ingresar</a></li>
+                        <li><a href="paginas/login.html">Ingresar</a></li>
                         <li><a href="paginas/aboutUs.html">Sobre Nosotros</a></li>
                     </ul>
                 </div>
@@ -92,7 +130,7 @@
                     <i class="fab fa-facebook-f"></i>
                     <i class="fab fa-instagram"></i>
                     <i class="fab fa-tiktok"></i>
-                    <i class="fab fa-youtube"></i>
+                     <a href="https://youtube.com/@pablit-b6n?si=aWyMIGxJkPSjXpG3"><i class="fab fa-youtube"></i></a>
                 </div> 
             </div>
         </section>

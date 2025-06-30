@@ -1,0 +1,143 @@
+/* Video */
+.video-background {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-background video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(59, 59, 59, 0.253);
+    backdrop-filter: blur(1px);   /* desenfoque */   
+  z-index: 1;
+}
+
+.hero-content {
+  position: absolute;
+  top: 96%;
+  left: 18%; 
+  transform: translate(-50%, -50%);
+  text-align: left;
+  z-index: 2;
+  color: #fff8d8;
+  padding: 2rem;
+  border-radius: 30px;
+  width: 420px;
+
+  /* espaciado interno entre elementos */
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.hero-content h2 {
+  font-size: 22px;
+  margin-bottom: 0.8rem;
+}
+
+.hero-content p {
+  font-size: 16px;
+  margin-bottom: 1.2rem;
+}
+
+.btn-hero {
+  background-color: transparent;
+  color: #051855;
+  border: 1px solid #051855;
+  align-items: center;
+  padding: 12px 26px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 40px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-hero:hover {
+  border: none !important;
+  color: #650492;
+  background-color: #edcd7f;
+}
+
+/* cards place */
+.intro-text {
+  margin-top: 40px;  
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #ffffff;
+  color: #333;
+}
+
+.intro-text h1 {
+  font-size: 2.7rem;
+  margin-bottom: 10px;
+}
+
+.intro-text p {
+  font-size: 1.3rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 12px 26px;
+  background: #0a153b;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Cards */
+.cards-section {
+  display: flex;
+  justify-content: center;
+  gap: 70px; 
+  padding: 60px 30px;
+  flex-wrap: wrap;
+  background: white;
+}
+
+.card {
+  background: #111c44;
+  padding: 30px 25px;
+  border-radius: 15px;
+  width: 320px;
+  text-align: center;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+  transition: transform 0.5s;
+  margin-bottom: 30px;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #edcd7f;
+  font-size: 18px;
+}
+
+.card p {
+  color: #ffffffe3;
+  margin: 15px 0;
+  font-size: 14px;
+}
+
+.card a {
+  color: #edcd7f;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+}

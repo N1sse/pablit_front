@@ -1,0 +1,86 @@
+.main-content-wrapper {
+            max-width: 1200px; /* Ajusta este ancho para que coincida con el resto de tu sitio */
+            margin: 40px auto; /* Centra el contenido y añade espacio vertical */
+            padding: 0 20px; /* Añade un poco de padding horizontal */
+        }
+
+        .videoExpli{
+            color: #FFC107;
+        }
+
+        .titulo {
+            text-align: center;
+            margin-bottom: 50px; /* Espacio debajo del título principal */
+        }
+
+        .titulo h2 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .titulo p {
+            font-size: 1.1em;
+            color: #666;
+            max-width: 800px; /* Limita el ancho del párrafo */
+            margin: 0 auto;
+        }
+
+        .cards-section {
+            margin-bottom: 60px; /* Espacio entre cada sección de tarjetas */
+        }
+
+        .section-heading {
+            font-size: 1.8em;
+            color: #333;
+            margin-bottom: 30px;
+            text-align: left; /* Alineado a la izquierda según el wireframe */
+        }
+
+        .cards-row {
+            display: flex; /* Habilita Flexbox para alinear las tarjetas horizontalmente */
+            overflow-x: auto; /* Permite el desplazamiento horizontal si el contenido desborda */
+            gap: 75px; /* Espacio entre las tarjetas */
+            padding-bottom: 20px; /* Espacio para la barra de desplazamiento (si aparece) */
+            scrollbar-width: thin;
+            scrollbar-color: #888 #f1f1f1;
+        }
+
+
+       
+        .card {
+            flex: 0 0 auto; /* Evita que las tarjetas se encojan, mantienen su ancho */
+            width: 250px; /* Ancho fijo de cada tarjeta */
+            padding: 20px;
+            text-align: center; /* Centra el texto dentro de la tarjeta */
+        }
+
+
+        .card-video-link {
+            display: block; /* Hace que el enlace ocupe todo el espacio de un bloque */
+            width: 300px; /* Ancho del área de la miniatura */
+            height: 160px; /* Altura del área de la miniatura */
+            border-radius: 4px; /* Bordes ligeramente redondeados */
+            margin: 0 auto 15px auto; /* Centra horizontalmente y añade margen inferior */
+            overflow: hidden; /* Importante para que la imagen no se salga si es más grande */
+        }
+
+        .card-thumbnail {
+            width: 100%; /* La imagen ocupa el 100% del ancho de su contenedor */
+            height: 100%; /* La imagen ocupa el 100% de la altura de su contenedor */
+            object-fit: cover; /* Ajusta la imagen para que cubra el área sin distorsionarse, recortando si es necesario */
+            display: block; /* Elimina cualquier espacio extra debajo de la imagen */
+        }
+
+
+        .card-text {
+            font-size: 1em;
+            color: #555;
+            line-height: 1.4;
+            margin-top: 0;
+            margin-bottom: 0;
+            margin-left: 60px;
+        }
+
+  
+

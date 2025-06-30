@@ -24,7 +24,7 @@ main {
 /*------Nav Bar --------*/
 
 nav { 
-    background-color:#f1ebcd;
+    background-color:#e0d9b3;
     height: 100px;
     display: flex;
     align-items: center;
@@ -35,7 +35,7 @@ nav {
 .logo {
     position: relative;
     width: 166px;
-    height: 70px; 
+    height: 74px; 
     top: 5px;
     left: 50px;
 }
@@ -43,7 +43,7 @@ nav {
 nav ul{
     list-style: none !important; 
     display: flex;
-    gap: 50px;
+    gap: 40px;
     padding-right: 80px;
 }
 nav ul li {
@@ -57,12 +57,31 @@ nav li a {
     font-size: 16px;
     font-weight:  bold;
     text-decoration: none !important;
+     display: flex;
+    align-items: center;
+    height: 100%; 
 }
 
 nav li a:hover{
   color: #650492;
 }
-
+.logout-button:hover {
+  color: #e7a6d7;
+}
+.logout-button{
+   background-color: #051855 !important;
+  width: 140px;
+  height: 40px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight:  bold;
+  justify-content: center;
+}
 .bLogin {
   background-color: #051855 !important;
   width: 200px;
@@ -91,12 +110,9 @@ nav li a:hover{
 .bLogin .login-text {
   font-size: 16px;
 }
+/**/
 
-ul .pag{
-  top: 24px !important;
-}
-
-    /*----------Back to top-----------*/
+/*----------Back to top-----------*/
 .generate-back-to-top {
     font-size: 20px;
     border-radius: 3px;
@@ -117,7 +133,7 @@ ul .pag{
     fill: currentColor;
 }
 a.generate-back-to-top {
-    background-color: #1e6b8b;
+    background-color: #051855;
     color: #ffffff;
 }
 
@@ -125,7 +141,7 @@ a.generate-back-to-top {
     /*------Footer--------*/
     footer {
       padding: 40px 20px;
-      background-color: #131313d8;;
+      background-color: #131313d8;
       border-top: 1px solid #333;
       color: #fff;
     }

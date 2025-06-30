@@ -1,0 +1,355 @@
+*{
+  font-family: 'Roboto', sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing: border-box;  
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+/*-------- Banner --------*/
+.bannerLogin {
+    position: relative;
+    width: 100%;
+    height: 70vh;
+    overflow: hidden;
+}
+/*img*/
+.img-background {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.imgBanner { 
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    min-width: 100%;
+    min-height: 100%;
+    display: block; 
+}
+
+/*-------- Botones --------*/
+.login-section { 
+    width: 100%;
+    background-color:#f1ebcd;
+    padding: 30px 0; 
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    gap: 30px; 
+    min-height: 150px; 
+    box-sizing: border-box;
+}
+
+/*grupo botones*/
+.b-group { 
+    display: flex;
+    gap: 20px;
+    padding: 20px 40px;
+    border-radius: 10px;
+}
+
+
+.btn {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-user { 
+    background-color: #051855;
+    color: white;
+}
+.btn-user:hover {
+    color: #e7a6d7;
+}
+.btn-login{
+    background-color: #051855;
+    color: white;
+}
+.btn-login:hover {
+    color: #e7a6d7;
+}
+
+/*-------- Pop up --------*/
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8);
+    visibility: hidden;
+    pointer-events: none;
+
+    width: 420px;
+    padding: 35px 40px;
+    background-color: #161616;
+    color: #f8f8f8;
+    box-shadow: 1px 1px 2px #f1ebcd;
+    border-radius: 30px;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.popup.active {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+    visibility: visible;
+    pointer-events: auto;
+}
+
+.popup .close-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px; /* Igual que en login */
+    width: 20px;
+    height: 20px;
+    background-color: #f1ebcd;
+    color: #051855;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 16px;
+}
+
+.popup .registrar h2 {
+    text-align: center;
+    color: #edcd7f;
+    margin: 0 0 25px 0;
+    font-size: 22px;
+}
+
+.popup .registrar .form-element {
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.popup .registrar .form-element label {
+    display: block;
+    margin-bottom: 8px;
+    color: #edcd7f;
+    font-size: 14px;
+}
+
+.popup .registrar .form-element input[type="text"],
+.popup .registrar .form-element input[type="password"] {
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    background-color: #fff;
+    color: #333;
+}
+
+.popup .registrar .form-element input[type="checkbox"] {
+    margin-right: 8px;
+    vertical-align: middle;
+}
+
+.popup .registrar .form-element button {
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background-color: #edcd7f;
+    color: #051855;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 25px;
+}
+
+.popup .registrar .form-element p {
+    font-size: 12px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.popup .registrar .form-element a {
+    font-size: 12px;
+    color: #edcd7f;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/*-------- Modal --------*/
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 7px;
+}
+
+.form-element.half {
+    flex: 1;
+}
+
+.modal-login{ 
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.8); 
+    visibility: hidden; 
+    pointer-events: none; 
+
+    width: 420px;
+    padding: 35px 40px;
+    background-color: #161616;
+    color: #f8f8f8;
+    box-shadow: 1px 1px 2px #f1ebcd;
+    border-radius: 30px;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: 1000; 
+}
+
+.modal-login.active{ 
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1); 
+    visibility: visible; 
+    pointer-events: auto; 
+}
+
+
+/*boton circular para cerrar el modal*/
+.modal-login #close-login{ 
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 20px;
+    height: 20px;
+    background-color: #f1ebcd;
+    color: #051855;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 16px;
+}
+
+
+.modal-login .acceder h2{ 
+    text-align: center;
+    color: #edcd7f;
+    margin: 0 0 25px 0;
+    font-size: 22px;
+}
+
+.modal-login .acceder .form-element{ 
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.modal-login .acceder .form-element label{ 
+    display: block; 
+    margin-bottom: 8px;
+    color: #edcd7f; 
+    font-size: 14px;
+}
+
+/* inputs modal */
+.modal-login .acceder .form-element input[type="text"],
+.modal-login .acceder .form-element input[type="password"]{
+    margin-top: 5px;
+    display: block;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #aaa;
+    border-radius: 20px;
+}
+
+.popup .form-element.half input,
+.popup #sex {
+    width: 120px;
+    border-radius: 20px;
+    padding: 10px 15px;
+    background-color: #fff;
+    color: #333;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* contenedor de peso y edad */
+.popup .form-row {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 8px;
+}
+
+/* estilos del select (sexo) */
+.popup select#sex {
+    max-width: 200px;
+    appearance: none;
+}
+
+.modal-login .acceder .form-element button{ 
+    width: 100%;
+    height: 40px;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background-color: #edcd7f;
+    color: #051855;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-top: 25px;
+}
+
+
+.modal-login .acceder .form-element p{ 
+    font-size: 12px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.modal-login .acceder .form-element a{ 
+    font-size: 12px;
+    color: #edcd7f;
+    text-decoration: none;
+    font-weight: 600;
+}
+/*fondo en pop up y modal para que tenga mas enfoque*/
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*Oscurece*/
+    background-color: rgba(10, 10, 10, 0.6);
+    /* desenfoque */
+    backdrop-filter: blur(5px);              
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: 999; /* debajo de los modales */
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}

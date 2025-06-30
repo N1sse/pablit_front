@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>Sobre Nosotros</title>
+    <title>User</title>
 
       <!-------  icono para pagina web  --------->
     <link rel="apple-touch-icon" href="../assets/img/logo.png">
@@ -11,9 +11,8 @@
     <!------ Estilos en css------->
     <!---navbar_footer--->
     <link rel="stylesheet" href="../assets/estilos/nav_footer.css">
-    <link rel="stylesheet" href="../assets/estilos/aboutUs.css">
-   
-
+    <!---user--->
+    <link rel="stylesheet" href="../assets/estilos/user.css">
 
 </head>
 <body>
@@ -31,8 +30,9 @@
                     <li class="pag">
                         <a href="../paginas/aboutUs.html">Sobre Nosotros</a>
                     </li>
+
                      <li>
-                        <a href="../paginas/login_register.html" class="bLogin">
+                        <a href="../paginas/login.html" class="bLogin">
                             <div class="iconLogin">
                               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                    class="bi bi-box-arrow-in-right" viewBox="0 0 16 16">
@@ -42,6 +42,10 @@
                             </div>
                             <span class="login-text">Login / Registrar</span>
                           </a>
+                    </li>
+
+                    <li>
+                      <a  href="../paginas/login.html" onclick="logout()" class="logout-button">Cerrar Sesión</a>
                     </li>
                 </ul>
             </nav>
@@ -57,49 +61,70 @@
         </span>
     </a>
 
- <main>
-  <section class="about-section">
-    <div class="about-row reverse">
-      <img src="../assets/img/girl.jpeg" alt="Pablit">
-      <div class="about-text">
-        <h2>¿Qué es Pablit?</h2>
-        <p>
-          Pablit es mucho más que una simple mascota virtual. Es un aliado que evoluciona junto a ti conforme mejoras tus hábitos. 
-          Su diseño interactivo y amigable motiva a personas de todas las edades a ser más constantes en su desarrollo personal. 
-          Cada acción saludable que realices ayuda a Pablit a crecer, aprender y transformarse contigo, convirtiendo tu día a día en una experiencia divertida y significativa.
-        </p>
-      </div>
-    </div>
+    <main>
+        <div class="user-card" id="userCard" style="display:none;">
+            <h2>Hola, <span id="userName">Usuario</span></h2>
+            <p>Edad: <span id="userAge">--</span></p>
+            <p>Peso: <span id="userWeight">--</span> kg</p>
+            <p>Sexo: <span id="userSex">--</span></p>
+        </div>
+        <section class="cards-grid">
+          <a href="../paginas/workout.html" class="card-link">
+            <div class="card">
+              <img src="../assets/img/a2.png" alt="">
+              <h3>Entrenamiento</h3>
+            </div>
+          </a>
+          <a href="../paginas/user.html" class="card-link">
+            <div class="card">
+              <img src="../assets/img/a1.png" alt="">
+              <h3>Mi Perfil</h3>
+            </div>
+          </a>
+          <a href="../paginas/report.html" class="card-link">
+            <div class="card">
+                <img src="../assets/img/a3.png" alt="">
+              <h3>Reportes</h3>
+            </div>
+          </a>
+          <a href="../paginas/friends.html" class="card-link">
+            <div class="card">
+              <img src="../assets/img/a4.png" alt="">
+              <h3>Amigos</h3>
+            </div>
+          </a>
+          <a href="#" class="card-link" onclick="toggleEditForm()">
+            <div class="card">
+              <i class="fas fa-user-edit"></i>
+              <p>Editar Perfil</p>
+            </div>
+          </a>
+        </section>
+          <div class="edit-user-section" id="editUserSection" style="display: none;">
+            <h3>Editar Perfil</h3>
+            <form id="editUserForm">
+              <label>Nombre:
+                <input type="text" id="editName" required />
+              </label>
+              <label>Edad:
+                <input type="number" id="editAge" required />
+              </label>
+              <label>Peso:
+                <input type="number" id="editWeight" required />
+              </label>
+              <label>Sexo:
+                <select id="editSex" required>
+                  <option value="M">Masculino</option>
+                  <option value="F">Femenino</option>
+                  <option value="Otro">Otro</option>
+                </select>
+              </label>
+              <button type="submit">Guardar cambios</button>
+            </form>
+          </div>
 
-    <div class="about-row">
-      <img src="../assets/img/pablit_lifting2.png" alt="Ejercicios">
-      <div class="about-text">
-        <h2>Ejercicios con Pablit</h2>
-        <p>
-          Con Pablit, entrenar se vuelve algo emocionante. A través de rutinas adaptadas a tu nivel, él te anima a seguir adelante. 
-          Mientras completas ejercicios, él muestra su progreso contigo, haciéndote sentir acompañado en cada paso. 
-          Ya sea estiramientos, cardio o fuerza, Pablit celebra tus logros contigo, motivándote a seguir mejorando cada día.
-        </p>
-      </div>
-    </div>
-  </section>
 
-  <section class="cards-section">
-    <div class="card">
-      <h3>Visión</h3>
-      <p>Fomentar el bienestar integral a través de un entorno virtual y el compromiso diario.</p>
-    </div>
-    <div class="card">
-      <h3>Misión</h3>
-      <p>Inspirar hábitos saludables mediante un acompañamiento virtual accesible y divertido.</p>
-    </div>
-    <div class="card">
-      <h3>Valores</h3>
-      <p>Compromiso, salud y crecimiento personal.</p>
-    </div>
-  </section>
-</main>
-
+    </main>
     <!---------------Footer------------------->  
     <footer id="contacto">
         <section class="row">
@@ -133,7 +158,7 @@
                     <i class="fab fa-facebook-f"></i>
                     <i class="fab fa-instagram"></i>
                     <i class="fab fa-tiktok"></i>
-                    <i class="fab fa-youtube"></i>
+                     <a href="https://youtube.com/@pablit-b6n?si=aWyMIGxJkPSjXpG3"><i class="fab fa-youtube"></i></a>
                 </div> 
             </div>
         </section>
@@ -151,6 +176,8 @@
 
     <!-------------Script----------------->
     <script src="https://kit.fontawesome.com/e888b5944d.js" crossorigin="anonymous"></script>   
+       <!----------js del modal/pop up------------>
+    <script src="../js/user.js" defer></script>
  
 </body>
 </html>

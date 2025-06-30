@@ -2,16 +2,19 @@
 <html>
 <head>
     <meta charset="UTF-8" />
-    <title>Reportes</title>
+    <title>Pablit</title>
 
-      <!-------  icono para pagina web  --------->
+    
+    <!-------  icono para pagina web  --------->
     <link rel="apple-touch-icon" href="../assets/img/logo.png">
     <link rel="shortcut icon" type="image/x-icon" href="../assets/img/logo.png">
     
     <!------ Estilos en css------->
     <!---navbar_footer--->
     <link rel="stylesheet" href="../assets/estilos/nav_footer.css">
-    <link rel="stylesheet" href="../assets/estilos/report.css">
+
+    <!---------- login ---------->
+    <link rel="stylesheet" href="../assets/estilos/login.css">
 
 </head>
 <body>
@@ -41,64 +44,97 @@
                             <span class="login-text">Login / Registrar</span>
                           </a>
                     </li>
-                    <li>
-                      <a  href="../paginas/login.html" onclick="logout()" class="logout-button">Cerrar Sesión</a>
-                    </li>
                 </ul>
             </nav>
         </div>
     </header>
 
-   <!---------------flecha------------------->  
-    <a title="Volver arriba" aria-label="Volver arriba" rel="nofollow" href="#" class="generate-back-to-top" style="opacity: 1; visibility: visible;" data-scroll-speed="400" data-start-scroll="300">
-        <span class="gp-icon icon-arrow-up">
-            <svg viewBox="0 0 330 512" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="1.414"> 
-                <path d="M305.863 314.916c0 2.266-1.133 4.815-2.832 6.514l-14.157 14.163c-1.699 1.7-3.964 2.832-6.513 2.832-2.265 0-4.813-1.133-6.512-2.832L164.572 224.276 53.295 335.593c-1.699 1.7-4.247 2.832-6.512 2.832-2.265 0-4.814-1.133-6.513-2.832L26.113 321.43c-1.699-1.7-2.831-4.248-2.831-6.514s1.132-4.816 2.831-6.515L158.06 176.408c1.699-1.7 4.247-2.833 6.512-2.833 2.265 0 4.814 1.133 6.513 2.833L303.03 308.4c1.7 1.7 2.832 4.249 2.832 6.515z" fill-rule="nonzero"></path> 
-            </svg>
-        </span>
-    </a>
-
+    <!--------------  Main   ----------------->
     <main>
-        <section id="reportes">
-            <!-- Aquí va el contenido principal -->
-            <h2>Buscar por nivel</h2>
-                <input type="number" id="levelInput" placeholder="Nivel" />
-                <button onclick="buscarPorNivel()">Buscar por Nivel</button>
-                <table id="tablaNivel">
-                <thead>
-                    <tr>
-                    <th>ID</th><th>Username</th><th>Edad</th><th>Sexo</th><th>Peso</th><th>Nivel</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-                </table>
+        <!--------Banner--------->
+        <section class="bannerLogin">
+            <div class="img-background">
+                 <img class="imgBanner" src="../assets/img/banner2.png" ></img>
+            </div>
+        </section>
 
-                <hr>
+        <!--------Botones de accder y registro --------->
+        <section class="login-section">
+            <div class="b-group">
+                <button id="show-register" class="btn btn-user">Crear Usuario</button>
+                <button id="show-login-btn" class="btn btn-login">Acceder</button>
+            </div>
+        </section>
+        <!----------------- Los Modal ------------------>
+        <!------register ------->
+        <section class="popup">
+            <div id="close-btn" class="close-btn">&times;</div>
+            <div class="registrar">
+                <h2>Registrar</h2>
+                <div class="form-element">
+                    <label for="email">Dirección de email</label>
+                    <input type="text" id="email" placeholder="Ej: pablit@work.com">
+                </div>
+                <div class="form-element">
+                    <label for="password">Contraseña</label>
+                    <input type="password" id="password" placeholder="ingrese su contraseña">
+                </div>
+               
+                <div class="form-row">
+                    <div class="form-element half">
+                        <label for="weight">Peso (kg)</label>
+                        <input type="number" id="weight" placeholder="Ej: 60">
+                    </div>
+                    <div class="form-element half">
+                        <label for="age">Edad</label>
+                        <input type="number" id="age" placeholder="Ej: 25">
+                    </div>
+                </div>
 
-                <h2>Buscar por username</h2>
-                <input type="text" id="usernameInput" placeholder="Username" />
-                <button onclick="buscarPorUsername()">Buscar por Username</button>
-                <table id="tablaUsername">
-                <thead>
-                    <tr><th>Campo</th><th>Valor</th></tr>
-                </thead>
-                <tbody></tbody>
-                </table>
+                <div class="form-element">
+                    <label for="sex">Sexo</label>
+                    <select id="sex">
+                        <option value="">Seleccione</option>
+                        <option value="F">Femenino</option>
+                        <option value="M">Masculino</option>
+                        <option value="O">Otro</option>
+                    </select>
+                </div>
 
-                <hr>
-
-                <h2>Todos los usuarios</h2>
-                <button onclick="cargarTodos()">Cargar todos</button>
-                <table id="tablaTodos">
-                <thead>
-                    <tr>
-                    <th>ID</th><th>Username</th><th>Edad</th><th>Sexo</th><th>Peso</th><th>Nivel</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-                </table>
+                <div class="form-element">
+                    <button class="crear-usuario" id="crear-usuario">Crear Usuario</button>
+                </div> 
+                <div class="form-element">
+                   <p class="acceder">¿Ya tienes una cuenta? <a id="link-to-login-modal">Acceder</a> </p>
+                </div> 
+                  
+            </div>
+        </section>
+        <!------login ------->
+       <section class="modal-login"> 
+            <div id="close-login" class="close-btn">&times;</div> 
+            <div class="acceder">
+            <h2>Acceder</h2>
+            <div class="form-element">
+                <label for="login-email">Dirección de email</label>
+                <input type="text" id="login-email" placeholder="Ej: pablit@work.com"> 
+            </div>
+            <div class="form-element">
+                <label for="login-password">Contraseña</label>
+                <input type="password" id="login-password" placeholder="ingrese su contraseña"> 
+            </div>
+           <div class="form-element">
+                <button  class="acceder" id="acceder">Acceder</button>
+            </div>
+            <div class="form-element">
+               <a id="link-to-register-modal">Crear Usuario</a> </div>
+             </div>
         </section>
     </main>
+
+    <!------ para el fondo del modal o el pop ------->
+    <div class="modal-overlay"></div>
+
     <!---------------Footer------------------->  
     <footer id="contacto">
         <section class="row">
@@ -132,7 +168,7 @@
                     <i class="fab fa-facebook-f"></i>
                     <i class="fab fa-instagram"></i>
                     <i class="fab fa-tiktok"></i>
-                     <a href="https://youtube.com/@pablit-b6n?si=aWyMIGxJkPSjXpG3"><i class="fab fa-youtube"></i></a>
+                    <a href="https://youtube.com/@pablit-b6n?si=aWyMIGxJkPSjXpG3"><i class="fab fa-youtube"></i></a>
                 </div> 
             </div>
         </section>
@@ -147,10 +183,12 @@
             </div>
         </section>
     </footer>   
-
+    
     <!-------------Script----------------->
+    <!------ icons ------->
     <script src="https://kit.fontawesome.com/e888b5944d.js" crossorigin="anonymous"></script>   
-    <script src="../js/report.js" crossorigin="anonymous"></script>
- 
+    <!----------js del modal/pop up------------>
+    <script src="../js/loginModal.js" defer></script>
+
 </body>
 </html>

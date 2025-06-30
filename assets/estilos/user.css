@@ -1,0 +1,116 @@
+.user-card {
+  background-color: #111c44;
+  color: white;
+  padding: 20px;
+  border-radius: 20px;
+  width: 600px;
+  height: 300px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  margin: 40px auto;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.no-user-msg {
+  font-size: 1.2em;
+  color: #b9cfff;
+}
+
+.cards-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 32px 16px;
+}
+
+.card-link {
+  text-decoration: none;
+}
+
+.card {
+  height: 154px;
+  width: 150px;
+  background-color: #182047;
+  color: #fff;
+  padding: 30px 20px;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+  border: 2px solid #283366;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4);
+  background-color: #25306a;
+}
+
+.card i {
+  font-size: 42px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 60px;      
+  line-height: 60px; 
+}
+
+.card h3{
+  font-size: 15px;
+}
+.edit-user-section {
+  background-color: #111c44;
+  color: white;
+  padding: 20px;
+  border-radius: 20px;
+  width: 600px;
+  margin: 40px auto;
+  font-family: 'Segoe UI', sans-serif;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+}
+
+.edit-user-section h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#editUserForm label {
+  display: block;
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+#editUserForm input,
+#editUserForm select {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  margin-top: 4px;
+}
+
+#editUserForm button {
+  background-color: #f1ebcd;
+  color: #051855;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+#editUserForm button:hover {
+  background-color: #edcd7f;
+}
