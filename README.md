@@ -12,6 +12,6 @@
 
 #Se uso open.ia para realizar los java script
 
-#Se uso los iconos de bootstrap y de frrepik
+#Se uso los iconos de bootstrap y de freepik
 
-#Se uso la ia de frreoki para generar imagenes y videos(apartir de material grafico que habíamos hecho)
+#Se uso la ia de freepik para generar imagenes y videos(apartir de material grafico que habíamos hecho para la anterior entrega)
