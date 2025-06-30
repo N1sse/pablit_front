@@ -1,5 +1,7 @@
 ## 📜 Historial de Commits
 
+##Este Historial de commits servira como bitacora de pruebas 
+
 | Fecha       | Hash       | Mensaje de Commit                         | Autor |
 |-------------|------------|-------------------------------------------|-------|
 | 2025-06-30 | `7416c8d` | subiendo todo | N1sse |
